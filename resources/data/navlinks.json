@@ -1,0 +1,22 @@
+[
+    {
+        "title": "Home",
+        "url": "/",
+        "target": "_self"
+    },
+    {
+        "title": "About Us",
+        "url": "/about",
+        "target": "_self"
+    },
+    {
+        "title": "Shop",
+        "url": "/shop",
+        "target": "_self"
+    },
+    {
+        "title": "Contact",
+        "url": "/contact",
+        "target": "_self"
+    }
+]
