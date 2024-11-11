@@ -7,8 +7,6 @@
     <title>{{$title ?? "Tica Beans"}}</title>
 </head>
 <body>
-
     {{$slot}}
-
 </body>
 </html>
