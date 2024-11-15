@@ -23,23 +23,21 @@
     ],
     "userNavigation": [
         {
-            "title": "Home",
-            "url": "/",
+            "name": "Search",
+            "iconClass": "magnifying-glass",
+            "url": "/search",
             "target": "_self"
         },
         {
-            "title": "About Us",
-            "url": "/about",
+            "name": "User",
+            "iconClass": "user",
+            "url": "/profile",
             "target": "_self"
         },
         {
-            "title": "Shop",
-            "url": "/shop",
-            "target": "_self"
-        },
-        {
-            "title": "Contact",
-            "url": "/contact",
+            "name": "Cart",
+            "iconClass": "bag-shopping",
+            "url": "/cart",
             "target": "_self"
         }
     ]
