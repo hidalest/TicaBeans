@@ -11,11 +11,13 @@
         <div class="flex-1 text-5xl capitalize leading-relaxed">
             <h1 class="">{!! $styledHeading !!}</h1>
 
+            <x-ui.button type="primary">Explore Product</x-ui.button>
+            <x-ui.button type="secondary">Learn More</x-ui.button>
+
         </div>
 
         <div class="flex-1">
             <img src="{{ asset('images/coffeeBeans.png') }}" alt="An Image of Coffee grains">
-
         </div>
 
     </section>
