@@ -13,6 +13,7 @@ export default {
         extend: {
             fontFamily: {
                 sans: ['Geist', ...defaultTheme.fontFamily.sans],
+                petit: ['"Petit Formal Script"', 'cursive'],
             },
         },
     },

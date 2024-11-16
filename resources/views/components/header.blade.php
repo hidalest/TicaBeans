@@ -1,10 +1,15 @@
 @props(['data'])
-<header class="h-full  flex flex-col container mx-auto pb-6">
+
+@php
+    $heading = $data->title;
+    $styledHeading = str_ireplace('coffee', '<span class="italic font-petit">Coffee</span>', $heading);
+@endphp
+<header class="h-full  flex flex-col container mx-auto pb-6 rounded">
     <x-navbar.navbar />
 
-    <section class="bg-white mt-2 rounded flex">
-        <div class="bg-red-500 flex-1">
-            <h1 class=" p-11">{{ $data->title }}</h1>
+    <section class="bg-white mt-2 rounded flex p-8">
+        <div class="flex-1 text-5xl capitalize leading-relaxed">
+            <h1 class="">{!! $styledHeading !!}</h1>
 
         </div>
 
