@@ -3,21 +3,21 @@
     $navIcon = asset('images/ticaBeansIcon.jpg');
 @endphp
 <nav class="flex items-center justify-between px-11 bg-white">
-    <a href="{{ url('/') }}" class="w-32 h-32">
+    <a href="{{ url('/') }}" class="w-24 h-24">
         <img src="{{ $navIcon }}" alt="Tica Beans" class="w-full h-full">
     </a>
 
     {{-- Site Navigation --}}
-    <div>
+    <div class="py-6 pm-4 flex justify-between ">
         @foreach ($navLinks['siteNavigation'] as $item)
-            <x-navbar.nav-links>{{ $item['title'] }}</x-navbar.nav-links>
+            <x-navbar.nav-links class="mx-5" :url="$item['url']">{{ $item['title'] }}</x-navbar.nav-links>
         @endforeach
     </div>
 
-    {{-- Shopping Cart and user Authentication --}}
+    {{-- Shopping Cart and user Authentication navigation --}}
     <div>
         @foreach ($navLinks['userNavigation'] as $item)
-            <x-navbar.nav-links :icon="$item['iconClass']"></x-navbar.nav-links>
+            <x-navbar.nav-links :icon="$item['iconClass']" :url="$item['url']"></x-navbar.nav-links>
         @endforeach
     </div>
 </nav>
