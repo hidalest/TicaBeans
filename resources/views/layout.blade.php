@@ -16,11 +16,7 @@
 </head>
 
 <body class="bg-gray-200">
-    <x-header class="container mx-auto">
-    </x-header>
-    <main>
-        {{ $slot }}
-    </main>
+    {{ $slot }}
 </body>
 
 </html>
