@@ -11,8 +11,8 @@
             "target": "_self"
         },
         {
-            "title": "Shop",
-            "url": "/shop",
+            "title": "Product",
+            "url": "/product",
             "target": "_self"
         },
         {
