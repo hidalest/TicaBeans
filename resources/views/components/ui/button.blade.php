@@ -4,6 +4,7 @@
     $typeClasses = [
         'primary' => 'bg-black text-white hover:bg-gray-100 hover:text-black hover:border-black ',
         'secondary' => 'bg-white text-black border-black hover:bg-black hover:text-white hover:border-white ',
+        'transparent' => 'bg-transparent border-transparent',
     ];
 @endphp
 
