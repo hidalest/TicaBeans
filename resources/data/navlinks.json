@@ -23,19 +23,13 @@
     ],
     "userNavigation": [
         {
-            "name": "Search",
-            "iconClass": "magnifying-glass",
-            "url": "/search",
-            "target": "_self"
-        },
-        {
-            "name": "User",
+            "title": "User",
             "iconClass": "user",
             "url": "/profile",
             "target": "_self"
         },
         {
-            "name": "Cart",
+            "title": "Cart",
             "iconClass": "bag-shopping",
             "url": "/cart",
             "target": "_self"
