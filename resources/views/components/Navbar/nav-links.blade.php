@@ -7,9 +7,9 @@
 @endphp
 
 <a href="{{ url($url) }}" {{ $attributes }}
-    class="hover:text-black  px-4 py-2 rounded {{ $isActiveClass ? $isActiveClass : 'text-gray-500' }} {{ $class }} ">
+    class="hover:text-black  px-4 py-2 rounded  {{ $isActiveClass ? $isActiveClass : 'text-gray-500' }} {{ $class }} ">
     @if ($icon)
-        <i class="fa-solid fa-{{ $icon }}" aria-hidden="true"></i>
+        <i class="fa-solid fa-{{ $icon }}" aria-hidden="true">{{ $slot ?? '' }}</i>
         <span class="sr-only">{{ $slot }}</span> <!-- Screen reader text for accessibility -->
     @else
         {{ $slot }}
