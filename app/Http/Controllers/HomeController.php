@@ -12,6 +12,6 @@ class HomeController extends Controller
     public function index() {
         $headingData = Heading::first();
 
-        return view("pages.home", compact('headingData'));
+        return view("pages.home");
     }
 }
