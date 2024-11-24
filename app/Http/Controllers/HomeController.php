@@ -10,8 +10,8 @@ class HomeController extends Controller
     //
 
     public function index() {
-        $headingData = Heading::first();
+        $data = json_decode(file_get_contents(resource_path("data/home.json")), true);
 
-        return view("pages.home");
+        return view("pages.home", compact('data'));
     }
 }

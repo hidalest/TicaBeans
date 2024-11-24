@@ -1,25 +1,24 @@
+@props(['data'])
 @php
-    $navLinks = json_decode(file_get_contents(resource_path('data/navlinks.json')), true);
-    $navIcon = asset('images/ticaBeansIcon.jpg');
 @endphp
 
 {{-- Desktop Navbar --}}
 <nav class="bg-white rounded hidden lg:flex">
     <div class=" container mx-auto items-center justify-between px-11 bg-white rounded hidden lg:flex"">
         <a href="{{ url('/') }}" class="w-24 h-24">
-            <img src="{{ $navIcon }}" alt="Tica Beans" class="w-full h-full">
+            <img src="{{ $data['navIcon'] }}" alt="Tica Beans" class="w-full h-full">
         </a>
 
         {{-- Site Navigation --}}
         <div class="py-6 pm-4 flex justify-between ">
-            @foreach ($navLinks['siteNavigation'] as $item)
+            @foreach ($data['siteNavigation'] as $item)
                 <x-navbar.nav-links class="mx-5" :url="$item['url']">{{ $item['title'] }}</x-navbar.nav-links>
             @endforeach
         </div>
 
         {{-- Shopping Cart and user Authentication navigation --}}
         <div>
-            @foreach ($navLinks['userNavigation'] as $item)
+            @foreach ($data['userNavigation'] as $item)
                 <x-navbar.nav-links :icon="$item['iconClass']" :url="$item['url']"></x-navbar.nav-links>
             @endforeach
         </div>
@@ -29,7 +28,7 @@
 {{-- Mobile Navbar --}}
 <nav x-data="{ isOpen: false }" class="lg:hidden items-center justify-between px-11 bg-white rounded flex relative">
     <a href="{{ url('/') }}" class="w-24 h-24">
-        <img src="{{ $navIcon }}" alt="Tica Beans" class="w-full h-full">
+        <img src="{{ $data['navIcon'] }}" alt="Tica Beans" class="w-full h-full">
     </a>
 
     <button @click="isOpen = !isOpen"
@@ -52,7 +51,7 @@
         {{-- Shopping Cart and user Authentication navigation --}}
         <div class=" flex justify-center items-center ">
             <div class=" flex justify-center items-center rounded w-75">
-                @foreach ($navLinks['userNavigation'] as $item)
+                @foreach ($data['userNavigation'] as $item)
                     <x-navbar.nav-links :icon="$item['iconClass']" :url="$item['url']"
                         class="py-4 capitalize text-2xl"></x-navbar.nav-links>
                 @endforeach
@@ -61,7 +60,7 @@
         </div>
         <!-- Menu Content -->
         <div class="py-6 pm-4 flex flex-col justify-between ">
-            @foreach ($navLinks['siteNavigation'] as $item)
+            @foreach ($data['siteNavigation'] as $item)
                 <x-navbar.nav-links class="mx-5 bg-opacity-30 shadow-none"
                     :url="$item['url']">{{ $item['title'] }}</x-navbar.nav-links>
             @endforeach
