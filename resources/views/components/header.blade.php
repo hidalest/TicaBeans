@@ -5,7 +5,7 @@
     $heading = $headingData['title'];
     $styledHeading = str_ireplace('coffee', '<span class="italic font-petit">Coffee</span>', $heading);
 @endphp
-<header class="h-full  flex flex-col mx-auto pb-6 rounded">
+<header class="h-full  flex flex-col mx-auto rounded">
     <x-navbar.navbar :data="$data['navLinks']" />
 
     <section class="bg-white mt-2 rounded lg:flex-row lg:items-center">
